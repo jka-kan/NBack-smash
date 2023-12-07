@@ -1,0 +1,81 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang=en>{% load static %}
+
+    <!DOCTYPE html>
+
+    <html lang=en>
+        <head>
+            <title>{% block title %}NBack Smash - Free Dual Task N-Back Game{% endblock %}</title>
+            
+            <meta name="description" content="NBack is IQ and brain training, improvement game to increase short term memory capacity and fluid intelligence">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+            <link rel="stylesheet" href="{% static 'nback_app/styles.css' %}">
+
+            <link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
+            <link href='https://fonts.googleapis.com/css?family=Nova Flat' rel='stylesheet'>
+            <link href='https://fonts.googleapis.com/css?family=Staatliches' rel='stylesheet'>
+            <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
+
+            <script type="module" import * as THREE from 'three';></script>
+
+        </head>
+
+        <body>
+            <div class="row" id="auth_row">
+
+                <div class="col" id="auth_col">
+                    <h1> NBack Smash - The Most Difficult Dual Task N-Back Game - Free </h1>
+                    <ul class="nav margin-left=-20px justify-content-center">
+
+                        {% if not request.user.is_authenticated %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'nback:login' %}">Log In</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'nback:register' %}">Register</a>
+                            </li>
+                        {% endif %}
+                        <li class="nav-item">
+                            <a class="nav-link" id="logout" href="{% url 'nback:help' %}">Help</a>
+                        </li>
+                        {% if request.user.is_authenticated %}
+                            <li class="nav-item">
+                                <a class="nav-link" id="logout" href="{% url 'nback:logout' %}">Logout</a>
+                            </li>
+                            <li id="logged_in">
+                            <span class="navbar-text">
+                                Logged in as:
+                                {{ request.user.username }}
+                                </span>
+                            </li>
+                        {% endif %}
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row" id="logorow">
+                    <div class="col" id="logo_col">
+                        <img id="logo" alt="Logo Nback Smash - The Most Difficult NBack Game" src="{% static 'nback_app/pics/logo.png' %}" class="center">
+                    </div>
+                </div>
+
+                {% block content %}
+                {% endblock %}
+
+            </div>
+        </body>
+    </html>

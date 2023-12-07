@@ -1,0 +1,513 @@
+
+body {
+  min-width: 350px;
+}
+
+body::before {
+
+  min-height: 100vh;
+  content: "";
+  /*background-image: url('pics/bg_img1.jpg');*/
+  background-image: url('pics/back4.jpg');
+  background-size:contain;
+  background-repeat: repeat;
+  background-position: center;
+  position: fixed;
+
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.2;
+  }
+
+h1 {
+  font-size: 15px;
+  text-align: center;
+}
+.center {
+    display: block;
+    margin-left:-4%;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: none;
+  }
+
+
+
+
+#logorow {
+  margin-bottom: 20px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 20px;
+  padding: 0px;} 
+
+
+#logo_col {
+    height:120px;
+  }
+  
+
+
+ul.remove-bullets {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+li {
+  padding: 0px;
+  margin: 0px;
+}
+
+
+.container {
+  min-width:50px;
+  width: auto !important;
+  width:800px;
+}
+
+
+#settings {display: inline;
+          background-color: #ecece2;
+          background-image: linear-gradient(90deg, #ecece2 0%, #f7f7f7 57%, #f8cfae 100%);
+          margin: 0px;
+        }
+
+
+#auth_row {display: block;
+          height: 60px;
+          margin-left: 0px;
+          margin-right: 0px;
+          padding: 0px;
+          }
+
+
+#auth_col {
+  background-color: lightcoral;
+  background-image: linear-gradient(rgb(248, 190, 190), #ffffff);
+  margin: 0;
+  padding: 0px;
+  margin-left: 0px;
+  height: 100%;
+  color: rgb(201, 144, 144);
+}
+
+
+.navbar-text {
+  text-align: right;
+  color: grey;
+  font-size: 15px;
+
+  margin-bottom: 0;
+  padding-bottom: 0;
+  padding-top: 6.8%;
+}
+
+
+#logged_in {
+  margin-left: 5%;
+  margin-bottom: 0;
+}
+
+
+#parent_column {
+  display: block;
+  padding: 0px;
+  aspect-ratio: 1.276;}
+
+
+#parent_row {
+  padding: 0;
+  margin-left: 0px;
+  margin-right: 0px;
+  height: 100%;
+  border: 2px solid;
+  border-color: rgb(114, 89, 73);
+  
+}
+
+
+#logo_col {
+  padding: 0px;
+}
+
+
+#myCanvas {
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    left: 0;
+    background-image: linear-gradient(-45deg, rgb(194, 181, 170), white);
+    
+  /*background: url(static/nback_app/pics/sky.png) no-repeat center center; background-size: cover;} */
+}
+
+.errorlist {
+  background-color: rgb(236, 109, 109);
+  list-style: none;
+}
+
+input[type=checkbox] { 
+  width: auto;
+  vertical-align: middle;
+  margin-bottom: 1px;
+}
+
+
+#status {
+  margin-top: 0px;
+  border-color: rgb(218, 140, 52);
+  padding-left: 0px;
+  padding-right: 5px;
+  padding-bottom: 0;
+  font-family: "Staatliches";
+  font-size: 20px;
+}
+
+
+
+
+input {
+  width: 70%;
+  margin-left: 0;
+}
+
+
+label {
+  padding: 0px;
+  vertical-align: middle;
+  margin-bottom: 0px;
+}
+
+
+
+
+
+th {
+  width: 50%;
+}
+
+form {
+  height: 400px;
+}
+
+
+#advanced_row {
+  margin-top: 5%;
+}
+
+#advanced_settings_row {
+  height: 1000px;
+}
+
+#advanced_form {
+  height: 100%;
+  margin-bottom: 5%;
+}
+
+#settings_box {
+  padding: 0px;
+  font-family: "Roboto";
+}
+
+table {
+  margin-bottom: 30px;
+  margin-top: 20px;
+  padding: 512px;
+  height: 70%;
+
+}
+
+
+#settings_table {
+  margin-top: 18px;
+}
+
+
+.status_element {
+  width: 100%;
+  margin-bottom: 7px;
+}
+
+
+.status_header {
+  width: 50%;
+}
+
+
+.status_number {
+  width: 60%;
+  padding-left: 5px;
+}
+
+
+.btn {
+  text-align: center;
+  width: 40%;
+  background-color:#2f8dda;
+  font-family: "Nova Flat";
+  font-size: 15px;
+  padding: 1%
+}
+
+
+.game_button {
+  padding: 0.5vw;
+  background-color:#65879c;
+  color: white;
+  border-radius:0.45em;
+  box-sizing: border-box;
+  box-shadow:inset 0 -0.6em 0 -0.34em rgba(0,0,0,0.17);
+  border: 0;
+  width: auto;
+  height: 9%;
+  font-size: max(min(0.0vw, 0.4em), 1rem);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: uppercase;
+  min-width: 60px;
+  min-height: 40px;
+}
+
+
+button {
+  background-color:#0799fa;
+}
+
+
+#start_button {
+  margin-top: 17%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  background-color: lightgrey; 
+  background-image: linear-gradient(-45deg, rgb(150, 124, 134), white);
+  border-radius:0.30em;
+  box-sizing: border-box;
+  border-color: rgb(158, 140, 143);
+}
+
+
+#stop_button {
+  margin-top: 17%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  background-color: lightgrey; 
+  background-image: linear-gradient(-45deg, rgb(150, 124, 134), white);
+  border-radius:0.30em;
+  box-sizing: border-box;
+  border-color: rgb(158, 140, 143);
+}
+
+
+
+#reset_button {
+  float: right;
+}
+
+
+#stats_button {
+  float:right;
+}
+
+
+#place_button {
+  z-index: 1;
+  bottom: 0;
+  position: absolute;
+  margin-bottom: 2%;
+  margin-left: 15%;
+}
+
+
+#sound_button {
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  margin-bottom: 2%;
+  margin-right: 15%;
+}
+
+
+.other_buttons {
+  width: 20%;
+}
+
+#stats_back_button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  width: 15%;
+}
+
+
+#chartCanvas {
+  margin-top: 10px;
+}
+
+
+#score_info {
+  text-align: center;
+}
+
+
+hr {
+  margin: 0;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 1240px) {
+  [class*="center"] {
+    object-fit:scale-down;
+  }
+  #logorow {
+    margin: 0;
+  }
+
+  #parent_column {
+    height:10%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  [class*="center"] {
+    object-fit:scale-down;
+  }
+  #logorow {
+    margin: 0;
+  }
+
+  /*#parent_column {
+    height:10%;
+  }*/
+
+  table {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  th {
+    padding: 20px;
+  }
+
+  td {
+    padding: 20px;
+  }
+
+  input[type=checkbox] { 
+    /*width: 100%;
+    height: 100%;*/
+
+    transform:  scale(2);
+    vertical-align: middle;
+    margin-bottom: 1px;
+  }
+
+  .status_header {
+    font-size: 30px;
+    padding: 0;
+  }
+
+  .status_number {
+    font-size: 35px;
+    padding: 0;
+  }
+
+  .status_element {
+    margin-left: 0%;
+  }
+
+  #settings {
+    height:100%;
+  }
+
+  #settings_form {
+    height: 100%;
+  }
+
+  #advanced_row {
+    height: 50px;
+  }
+
+  #advanced_button {
+    font-size: 20px;
+   
+  }
+
+  #stats_button {
+    font-size: 20px;
+  }
+
+  #reset_button {
+    font-size: 20px;
+  }
+
+  #advanced_reset_button {
+    font-size: 20px;
+  }
+
+  #advanced_back_button {
+    font-size: 20px;
+    margin-left: 5%;
+  }
+
+  input[type=submit] {
+    font-size: 20px;
+    
+
+  }
+  
+  #start_button {
+    font-size: 25px;
+    margin-top: 30px;
+  }
+  th {
+    padding: 0;
+
+  }
+
+  td {
+    padding-left: 6px;
+    padding-right: 0;
+  }
+
+  #place_button {
+    padding: 5px;
+  }
+
+  #sound_button {
+    padding: 5px;
+  }
+
+  /*.container {
+    height: 5000px;
+  }
+
+  #parent_row {
+    height: 2000px;
+  }*/
+
+  #parent_column {
+    height: 500px;
+    
+  }
+
+  #myCanvas {
+    height:100%;
+    
+  }
+
+}
+

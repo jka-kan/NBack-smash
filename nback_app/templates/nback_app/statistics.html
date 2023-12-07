@@ -1,0 +1,40 @@
+{% extends "nback_app/layout.html" %}
+{% load static %}
+
+{% block content %}
+
+<style>
+    body::before {
+        opacity: 0.3;
+    }
+</style>
+
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+        <div>
+            <canvas id="chartCanvas"></canvas>
+
+            <script src="{% static 'nback_app/stats.js'%}"></script>
+            
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div id="score_info" class="col">
+        <br>
+        Score shows right answers adjusted with difficulty level.
+        <br>
+        Right answers % is right answers divided by total amount of matches in the sequence.
+        <br>
+    </div>
+</div>
+
+<div class="row" id="stats_button_row">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+        <a class="btn btn-primary" id="stats_back_button" href="{% url 'nback:index' %}">Back</a>
+    </div>
+</div>
+
+
+{% endblock %}

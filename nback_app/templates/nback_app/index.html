@@ -1,0 +1,89 @@
+{% extends "nback_app/layout.html" %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="row" id="parent_row">
+    <div class="col-lg-9 col-sm-12" id="parent_column">
+        <canvas id="myCanvas" style="z-index: 0; height: 100%; width: 100%; display: block;">
+        </canvas>
+        <button class="game_button" id="place_button" onclick="">Place</button>
+        <button class="game_button" id="sound_button" onclick="">Sound</button>
+    </div>
+
+    <div class="col-lg-3 col-sm-12" id="settings">
+
+        <div id="status">
+            <div>
+
+                <button id="start_button" style="display: block"onclick="runGame()">START</button>
+                <button id="stop_button" style="display: none" onclick="playField.stop()">STOP</button>
+
+                <table class="status_element">
+                    <tr>
+                        <td class="status_header" >Correct: </td>
+                        <td class="status_number"><correct>0</correct></td>
+                    </tr>
+
+                    <tr>
+                        <td class="status_header">Wrong: </td>
+                        <td class="status_number"><wrong>0</wrong></td>
+                    </tr>
+
+                    <tr>
+                        <td class="status_header">Cycle: </td>
+                        <td class="status_number"><cycle>0</cycle></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <hr>
+
+        <div id="settings_box">
+
+            <form id="settings_form" action="{% url 'nback:changesettings' %}" method="post">
+                {% csrf_token %}
+                <table id="settings_table">
+                {{ form.as_table }}
+                </table>
+
+                <input type="submit" class="btn btn-primary" value="Apply">
+                <a class="btn btn-primary" id="reset_button" href="/reset_defaults">Reset</a>
+
+                <div id="advanced_row">
+                <a class="btn btn-primary" id="advanced_button" href="/advanced_settings">Advanced</a>
+
+                {% if user.is_authenticated %}
+                    <a class="btn btn-primary" id="stats_button" href="/statistics">Results</a>
+                {% else %}
+                    <a class="btn btn-primary" id="stats_button" onclick="this.blur();"
+                    href="javascript: msg = 'Only registered users can access statistics.';
+                    msg += ' Please register. It is completely free !!!';
+                    alert(msg);">Results</a>
+                {% endif %}
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="row" id="controls">
+    <div class="col-12">
+        <div id="run_buttons">
+        </div>
+    </div>
+</div>
+
+
+
+<script data-cfasync="true" src='/static/nback_app/app.js'>
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', init);
+</script>
+
+{% endblock %}

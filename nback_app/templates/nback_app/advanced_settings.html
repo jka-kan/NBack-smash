@@ -1,0 +1,32 @@
+{% extends "nback_app/layout.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col">
+        <h2 class="bg-danger">{{error}}</h2>
+    </div>
+</div>
+
+<div class="row" id="advanced_settings_row">
+    <div class="col-lg-6 col-md-9 col-sm-12">
+        <div>
+            <form action="{% url 'nback:advanced_settings' %}" method="post" id="advanced_form">
+                
+                {% csrf_token %}
+
+                <table>
+                    {{ form }}
+                </table>
+
+                <input type="submit" class="btn btn-primary" value="Apply" id="advanced_apply_button">
+            </form>
+
+            <a class="btn btn-primary other_buttons" href="{% url 'nback:reset_defaults' %}?name=advanced" id="advanced_reset_button">Reset</a>
+            <a class="btn btn-primary other_buttons" href="{% url 'nback:index' %}" id="advanced_back_button">Back</a>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
