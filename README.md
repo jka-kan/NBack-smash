@@ -2,7 +2,7 @@
 
 You can test the live version at:
 
-[http://www.nbacksmash.com](URL)
+[www.nbacksmash.com](http://www.nbacksmash.com)
 
 Django database files are not included in this code. In order to run it, Django must be initialized in the root directory and paths updated in the settings files accordingly. Also Three.js must be installed. See instructions below.
 
@@ -40,7 +40,7 @@ The user can change various settings, for instance rotation speed and direction,
 
 Read more about dual n-back task:
 
-[https://en.wikipedia.org/wiki/N-back](URL)
+[https://en.wikipedia.org/wiki/N-back](https://en.wikipedia.org/wiki/N-back)
 
 
 
